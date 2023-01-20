@@ -35,3 +35,4 @@ source $HOME/.config/nvim/ale.vim
 source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/nerdtree.vim
 source $HOME/.config/nvim/vim-gh-line.vim
+source $HOME/.config/nvim/move-window-among-tabs.vim
