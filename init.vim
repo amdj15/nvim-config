@@ -20,6 +20,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ruanyl/vim-gh-line'
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'heavenshell/vim-jsdoc', {
   \ 'for': ['javascript', 'javascript.jsx','typescript'],
   \ 'do': 'make install'
@@ -36,3 +38,4 @@ source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/nerdtree.vim
 source $HOME/.config/nvim/vim-gh-line.vim
 source $HOME/.config/nvim/move-window-among-tabs.vim
+source $HOME/.config/nvim/db.vim
