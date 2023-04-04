@@ -27,6 +27,14 @@ Plug 'heavenshell/vim-jsdoc', {
 \}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'rafamadriz/friendly-snippets'
+Plug 'onsails/lspkind.nvim'
 call plug#end()
 
 source $HOME/.config/nvim/colortheme.vim
@@ -40,3 +48,4 @@ source $HOME/.config/nvim/nerdtree.vim
 source $HOME/.config/nvim/vim-gh-line.vim
 source $HOME/.config/nvim/move-window-among-tabs.vim
 source $HOME/.config/nvim/db.vim
+source $HOME/.config/nvim/cmp.vim
