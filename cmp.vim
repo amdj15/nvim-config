@@ -21,6 +21,7 @@ lua <<EOF
   -- Set up nvim-cmp.
   local cmp = require'cmp'
   local lspkind = require'lspkind'
+  local devicons = require'nvim-web-devicons'
 
   cmp.setup({
     snippet = {
@@ -46,26 +47,36 @@ lua <<EOF
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     formatting = {
-      format = lspkind.cmp_format({
-        mode = "symbol_text",
-        menu = ({
-          buffer = "[Buffer]",
-          nvim_lsp = "[LSP]",
-          luasnip = "[LuaSnip]",
-          nvim_lua = "[Lua]",
-          latex_symbols = "[Latex]",
-        })
-      }),
+      fields = { "kind", "abbr", "menu" },
+      format = function(entry, vim_item)
+        if vim.tbl_contains({ 'path' }, entry.source.name) then
+          local icon, hl_group = devicons.get_icon(entry:get_completion_item().label)
+
+          if icon then
+            vim_item.kind = icon
+            vim_item.kind_hl_group = hl_group
+
+            return vim_item
+          end
+        end
+
+        return lspkind.cmp_format({
+          mode = "symbol",
+          menu = ({
+            buffer = "[Buffer]",
+            nvim_lsp = "[LSP]",
+            luasnip = "[LuaSnip]",
+            nvim_lua = "[Lua]",
+            latex_symbols = "[Latex]",
+          })
+        })(entry, vim_item)
+      end
     },
     sources = cmp.config.sources({
+    { name = 'buffer' },
       { name = 'nvim_lsp' },
-      -- { name = 'vsnip' }, -- For vsnip users.
       { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
-    }, {
-      { name = 'buffer' },
-    })
+    }, {})
   })
 
   -- Set configuration for specific filetype.

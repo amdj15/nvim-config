@@ -35,6 +35,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'onsails/lspkind.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 
 source $HOME/.config/nvim/colortheme.vim
