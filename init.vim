@@ -3,8 +3,6 @@ call plug#begin()
 Plug 'drewtempelmeyer/palenight.vim'
 " themes end
 
-Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'yggdroot/indentline'
 Plug 'jiangmiao/auto-pairs'
@@ -35,6 +33,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'onsails/lspkind.nvim'
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 
@@ -45,7 +44,8 @@ source $HOME/.config/nvim/emmet.vim
 source $HOME/.config/nvim/airline.vim
 source $HOME/.config/nvim/ale.vim
 source $HOME/.config/nvim/telescope.vim
-source $HOME/.config/nvim/nerdtree.vim
+" source $HOME/.config/nvim/nerdtree.vim
+source $HOME/.config/nvim/nvim-tree.vim
 source $HOME/.config/nvim/vim-gh-line.vim
 source $HOME/.config/nvim/move-window-among-tabs.vim
 source $HOME/.config/nvim/db.vim
