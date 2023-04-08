@@ -44,7 +44,6 @@ source $HOME/.config/nvim/emmet.vim
 source $HOME/.config/nvim/airline.vim
 source $HOME/.config/nvim/ale.vim
 source $HOME/.config/nvim/telescope.vim
-" source $HOME/.config/nvim/nerdtree.vim
 source $HOME/.config/nvim/nvim-tree.vim
 source $HOME/.config/nvim/vim-gh-line.vim
 source $HOME/.config/nvim/move-window-among-tabs.vim
