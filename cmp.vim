@@ -72,11 +72,14 @@ lua <<EOF
         })(entry, vim_item)
       end
     },
-    sources = cmp.config.sources({
-    { name = 'buffer' },
-      { name = 'nvim_lsp' },
-      { name = 'luasnip' }, -- For luasnip users.
-    }, {})
+    sources = cmp.config.sources(
+      {
+        { name = 'luasnip' }, -- For luasnip users.
+        { name = 'buffer' },
+        { name = 'nvim_lsp' },
+      },
+      {}
+    )
   })
 
   -- Set configuration for specific filetype.

@@ -9,7 +9,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'tomarrell/vim-npr'
 Plug 'mattn/emmet-vim'
@@ -35,6 +34,12 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'onsails/lspkind.nvim'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
+
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+
 call plug#end()
 
 source $HOME/.config/nvim/colortheme.vim
@@ -42,10 +47,10 @@ source $HOME/.config/nvim/general-config.vim
 source $HOME/.config/nvim/toggleterm.vim
 source $HOME/.config/nvim/emmet.vim
 source $HOME/.config/nvim/airline.vim
-source $HOME/.config/nvim/ale.vim
 source $HOME/.config/nvim/telescope.vim
 source $HOME/.config/nvim/nvim-tree.vim
 source $HOME/.config/nvim/vim-gh-line.vim
 source $HOME/.config/nvim/move-window-among-tabs.vim
 source $HOME/.config/nvim/db.vim
 source $HOME/.config/nvim/cmp.vim
+source $HOME/.config/nvim/lsp.vim
