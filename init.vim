@@ -1,6 +1,9 @@
 call plug#begin()
 " themes start
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'rebelot/kanagawa.nvim'
 " themes end
 
 Plug 'vim-airline/vim-airline'
@@ -12,7 +15,6 @@ Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tomarrell/vim-npr'
 Plug 'mattn/emmet-vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'ruanyl/vim-gh-line'
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 Plug 'dhruvasagar/vim-table-mode'
@@ -40,6 +42,7 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 source $HOME/.config/nvim/colortheme.vim
@@ -54,3 +57,4 @@ source $HOME/.config/nvim/move-window-among-tabs.vim
 source $HOME/.config/nvim/db.vim
 source $HOME/.config/nvim/cmp.vim
 source $HOME/.config/nvim/lsp.vim
+source $HOME/.config/nvim/treesitter.vim

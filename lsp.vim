@@ -1,7 +1,7 @@
 lua << EOF
   require("mason").setup()
   require("mason-lspconfig").setup({
-    ensure_installed = { "solargraph", "tsserver", "eslint" }
+    ensure_installed = { "solargraph", "eslint", "tsserver" }
   })
 
   require("mason-lspconfig").setup_handlers {
@@ -15,10 +15,23 @@ lua << EOF
 
   -- Global mappings.
   -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-  vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+  -- vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
   vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
   vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
   vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+
+  local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+  for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+  end
+
+  vim.diagnostic.config({ virtual_text = false })
+
+  -- You will likely want to reduce updatetime which affects CursorHold
+  -- note: this setting is global and should be set only once
+  vim.o.updatetime = 250
+  vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
   -- Use LspAttach autocommand to only map the following keys
   -- after the language server attaches to the current buffer
@@ -45,10 +58,13 @@ lua << EOF
       vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
       vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, opts)
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-      vim.keymap.set('n', '<leader>lf', function()
+      vim.keymap.set('n', '<space>f', function()
         vim.lsp.buf.format { async = true }
+      end, opts)
+
+      vim.keymap.set('n', '<leader>lf', function()
+        vim.cmd.EslintFixAll()
       end, opts)
     end,
   })
 EOF
-
