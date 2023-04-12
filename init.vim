@@ -12,7 +12,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-Plug 'tpope/vim-commentary'
 Plug 'tomarrell/vim-npr'
 Plug 'mattn/emmet-vim'
 Plug 'ruanyl/vim-gh-line'
@@ -43,6 +42,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 source $HOME/.config/nvim/colortheme.vim

@@ -39,6 +39,9 @@ lua << EOF
 
     indent = {
       enable = true,
+    },
+    context_commentstring = {
+      enable = true,
     }
   }
 EOF
