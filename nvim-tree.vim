@@ -79,8 +79,8 @@ lua << EOF
     vim.keymap.set('n', 'm',     api.marks.toggle,                      opts('Toggle Bookmark'))
     vim.keymap.set('n', 'o',     api.node.open.edit,                    opts('Open'))
     vim.keymap.set('n', 'O',     api.node.open.no_window_picker,        opts('Open: No Window Picker'))
-    vim.keymap.set('n', 'p',     api.fs.paste,                          opts('Paste'))
-    vim.keymap.set('n', 'P',     api.node.navigate.parent,              opts('Parent Directory'))
+    vim.keymap.set('n', 'P',     api.fs.paste,                          opts('Paste'))
+    vim.keymap.set('n', 'p',     api.node.navigate.parent,              opts('Parent Directory'))
     vim.keymap.set('n', 'q',     api.tree.close,                        opts('Close'))
     vim.keymap.set('n', 'r',     api.fs.rename,                         opts('Rename'))
     vim.keymap.set('n', 'R',     api.tree.reload,                       opts('Refresh'))
@@ -120,10 +120,6 @@ lua << EOF
     vim.keymap.set('n', 'A', api.tree.expand_all, opts('Expand All'))
     vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
     vim.keymap.set('n', 'C', api.tree.change_root_to_node, opts('CD'))
-    vim.keymap.set('n', 'P', function()
-      local node = api.tree.get_node_under_cursor()
-      print(node.absolute_path)
-    end, opts('Print Node Path'))
 
     vim.keymap.set('n', 'Z', api.node.run.system, opts('Run System'))
   end
