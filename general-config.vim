@@ -53,6 +53,7 @@ vnoremap <S-Tab> <
 " Tabs manipulation
 nnoremap <leader>q :tabprevious<CR>
 nnoremap <leader>w :tabnext<CR>
+nnoremap <leader>tn :tabnew<CR>
 
 " Copy/Paste clipboard
 nnoremap <leader>y "+y
