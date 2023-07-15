@@ -4,6 +4,8 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'rebelot/kanagawa.nvim'
+Plug 'sainnhe/sonokai'
+Plug 'projekt0n/github-nvim-theme', { 'tag': 'v0.0.7' }
 " themes end
 
 Plug 'vim-airline/vim-airline'
