@@ -131,6 +131,10 @@ lua << EOF
     git = {
       ignore = false,
     },
+    view = {
+      width = 60,
+      side = 'right'
+    },
   })
 
   vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<cr>" ,{ silent = true, noremap = true })

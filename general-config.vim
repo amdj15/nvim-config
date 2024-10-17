@@ -18,7 +18,7 @@ set incsearch
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 "Automatically removing all trailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
+" autocmd BufWritePre * %s/\s\+$//e
 
 " Tab to spaces
 set tabstop=2

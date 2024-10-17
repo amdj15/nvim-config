@@ -26,7 +26,7 @@ Plug 'heavenshell/vim-jsdoc', {
   \ 'do': 'make install'
 \}
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -46,6 +46,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'tpope/vim-commentary'
+
+Plug 'davidosomething/format-ts-errors.nvim'
 call plug#end()
 
 source $HOME/.config/nvim/colortheme.vim
@@ -61,3 +63,4 @@ source $HOME/.config/nvim/db.vim
 source $HOME/.config/nvim/cmp.vim
 source $HOME/.config/nvim/lsp.vim
 source $HOME/.config/nvim/treesitter.vim
+source $HOME/.config/nvim/format-ts-errors.vim
