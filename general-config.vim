@@ -20,6 +20,9 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 "Automatically removing all trailing whitespace
 " autocmd BufWritePre * %s/\s\+$//e
 
+" Remove trailing whitespace in selected text
+vnoremap <Leader>rs :<C-U>silent! '<,'>s/\s\+$//<CR>
+
 " Tab to spaces
 set tabstop=2
 set expandtab

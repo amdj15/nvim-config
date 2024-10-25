@@ -6,7 +6,7 @@
 " colorscheme catppuccin
 " colorscheme catppuccin-latte
 " colorscheme catppuccin-frappe
-colorscheme catppuccin-macchiato
+" colorscheme catppuccin-macchiato
 " colorscheme catppuccin-mocha
 " ==== catppuccin
 "
@@ -15,7 +15,7 @@ colorscheme catppuccin-macchiato
 " ====
 
 " ====
-" colorscheme tokyonight-moon
+colorscheme tokyonight
 " ====
 
 " ====
